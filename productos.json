@@ -1,0 +1,23 @@
+[
+  {
+    "id": "GAS-001",
+    "nombre": "Garrafa R410a",
+    "marca": "Genérica",
+    "imagen": "imagen1.jpg",
+    "stock": "disponible"
+  },
+  {
+    "id": "HER-045",
+    "nombre": "Bomba de Vacío",
+    "marca": "Genérica",
+    "imagen": "imagen2.jpg",
+    "stock": "consultar"
+  },
+  {
+    "id": "HER-012",
+    "nombre": "Manifold R410/R22",
+    "marca": "Genérica",
+    "imagen": "imagen3.jpg",
+    "stock": "sin-stock"
+  }
+]
