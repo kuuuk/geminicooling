@@ -165,14 +165,32 @@ h2 {
 /* Ajuste para iPhone / Mobile */
 @media (max-width: 768px) {
   nav {
+    flex-direction: column; /* Apila el logo arriba y los links abajo */
     padding: 1rem;
+    gap: 10px;
   }
+
   .nav-links {
-    display: none;
-  } /* Menú simplificado */
+    display: flex; /* Cambiamos de none a flex para que se vean */
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin: 0;
+    font-size: 0.8rem; /* Un poco más chico para que entre en ancho de pantalla */
+  }
+
+  .nav-whatsapp {
+    margin-left: 0 !important;
+    font-size: 0.8rem;
+  }
+
   h1 {
     font-size: 1.8rem;
   }
+
   .social-float {
     top: auto;
     bottom: 1rem;
@@ -180,6 +198,7 @@ h2 {
     transform: translateX(-50%);
     flex-direction: row;
   }
+
   section {
     padding: 2rem 1rem;
   }
