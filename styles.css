@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --bg: #0a0a0a;
   --surface: #141414;
@@ -48,6 +51,26 @@ nav {
   margin-left: 2rem;
   font-size: 0.9rem;
   text-transform: uppercase;
+}
+/* Contenedor de links */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Agregamos la línea separadora */
+.nav-links a:not(:last-child)::after {
+  content: "|"; /* La barra vertical */
+  margin-left: 15px;
+  margin-right: 15px;
+  color: var(--iron); /* Gris industrial */
+  font-weight: 300;
+  opacity: 0.5; /* Para que sea sutil */
+}
+
+/* Ajuste para que el botón de WhatsApp no tenga línea al final */
+.nav-whatsapp::after {
+  display: none;
 }
 
 section {
@@ -163,24 +186,82 @@ h2 {
   background: #1a1a1a;
 }
 /* Ajuste para iPhone / Mobile */
+/* Botón Hamburguesa - Invisible en Desktop */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--tecnico);
+  transition: 0.3s;
+}
+
+/* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column; /* Apila el logo arriba y los links abajo */
-    padding: 1rem;
-    gap: 10px;
+      justify-content: space-between;
+      padding: 1rem;
+      position: relative;
+      z-index: 1002;
   }
 
+  /* Escondemos el texto del nav original para que no flote */
   .nav-links {
-    display: flex; /* Cambiamos de none a flex para que se vean */
-    justify-content: center;
-    width: 100%;
-    gap: 10px;
+      display: none; /* Por defecto escondido */
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 100%; /* Ocupa todo el ancho en mobile para evitar ruidos visuales */
+      background: #0a0a0a; /* Fondo sólido negro */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: 0.4s ease;
+      z-index: 1000;
+  }
+
+  /* Cuando se activa el menú */
+  .nav-links.active {
+      display: flex; /* Se vuelve visible */
+      right: 0;
   }
 
   .nav-links a {
-    margin: 0;
-    font-size: 0.8rem; /* Un poco más chico para que entre en ancho de pantalla */
+      margin: 1.5rem 0;
+      font-size: 1.5rem;
+      color: var(--accent);
   }
+
+  .menu-toggle {
+      display: flex;
+      position: relative;
+      z-index: 1001;
+  }
+}
+  /* HASTA ACÁ EL NAV ADAPTADO MOBILE */
+
+
+  /* Clase que activaremos con JS */
+  .nav-links.active {
+      right: 0;
+  }
+
+  .nav-links a {
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+  }
+  
+  .nav-whatsapp { margin-left: 0 !important; }
+}
 
   .nav-whatsapp {
     margin-left: 0 !important;
@@ -202,4 +283,105 @@ h2 {
   section {
     padding: 2rem 1rem;
   }
+
+
+/*DESDE ACÁ EL EMERGENCIA */
+#emergencia {
+  padding: 2rem;
+}
+.status-card {
+  background: #1a1a1a;
+  border: 1px solid var(--tecnico);
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 20px;
+}
+.dot-parpadeo {
+  width: 12px;
+  height: 12px;
+  background: var(--tecnico);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(51, 170, 35, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(51, 170, 35, 0);
+  }
+}
+#cart-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--tecnico);
+  color: #000;
+  padding: 12px 20px;
+  font-family: var(--sans);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 999;
+  border-radius: 2px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+#cart-count {
+  background: #000;
+  color: var(--tecnico);
+  padding: 2px 8px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.cart-hidden { display: none !important; }
+
+/* Efecto hover industrial */
+#cart-float:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--tecnico);
+}
+#cart-float {
+  /* ... (mantener lo anterior) ... */
+  display: flex;
+  align-items: center;
+  padding-right: 10px; /* Ajuste para el botón de vaciar */
+}
+
+#btn-vaciar {
+  background: rgba(0,0,0,0.2);
+  border: none;
+  color: #000;
+  margin-left: 10px;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-weight: bold;
+  border-left: 1px solid rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+#btn-vaciar:hover {
+  background: #ff3333;
+  color: #fff;
+}
+.btn-ver-mas {
+  display: inline-block;
+  padding: 15px 40px;
+  border: 1px solid var(--iron);
+  color: var(--accent);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.btn-ver-mas:hover {
+  background: var(--iron);
+  border-color: var(--tecnico);
 }

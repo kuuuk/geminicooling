@@ -1,23 +1,86 @@
 [
   {
     "id": "GAS-001",
-    "nombre": "Garrafa R410a",
-    "marca": "Genérica",
-    "imagen": "imagen1.jpg",
+    "nombre": "Garrafa R410a (11.3kg)",
+    "marca": "Anton",
+    "imagen": "img/gas-r410.jpg",
     "stock": "disponible"
   },
   {
-    "id": "HER-045",
-    "nombre": "Bomba de Vacío",
-    "marca": "Genérica",
-    "imagen": "imagen2.jpg",
+    "id": "MOT-102",
+    "nombre": "Motocompresor 1/4 HP R134",
+    "marca": "Tecumseh",
+    "imagen": "img/moto-14.jpg",
     "stock": "consultar"
   },
   {
-    "id": "HER-012",
-    "nombre": "Manifold R410/R22",
+    "id": "GAS-005",
+    "nombre": "Gas R22 (13.6kg)",
     "marca": "Genérica",
-    "imagen": "imagen3.jpg",
+    "imagen": "img/gas-r22.jpg",
     "stock": "sin-stock"
+  },
+  {
+    "id": "HER-088",
+    "nombre": "Bomba de Vacío 2 Etapas",
+    "marca": "Dosivac",
+    "imagen": "img/bomba.jpg",
+    "stock": "disponible"
+  },
+  {
+    "id": "GAS-001",
+    "nombre": "Garrafa R410a (11.3kg)",
+    "marca": "Anton",
+    "imagen": "img/gas-r410.jpg",
+    "stock": "disponible"
+  },
+  {
+    "id": "MOT-102",
+    "nombre": "Motocompresor 1/4 HP R134",
+    "marca": "Tecumseh",
+    "imagen": "img/moto-14.jpg",
+    "stock": "consultar"
+  },
+  {
+    "id": "GAS-005",
+    "nombre": "Gas R22 (13.6kg)",
+    "marca": "Genérica",
+    "imagen": "img/gas-r22.jpg",
+    "stock": "sin-stock"
+  },
+  {
+    "id": "HER-088",
+    "nombre": "Bomba de Vacío 2 Etapas",
+    "marca": "Dosivac",
+    "imagen": "img/bomba.jpg",
+    "stock": "disponible"
+  },
+  {
+    "id": "GAS-001",
+    "nombre": "Garrafa R410a (11.3kg)",
+    "marca": "Anton",
+    "imagen": "img/gas-r410.jpg",
+    "stock": "disponible"
+  },
+  {
+    "id": "MOT-102",
+    "nombre": "Motocompresor 1/4 HP R134",
+    "marca": "Tecumseh",
+    "imagen": "img/moto-14.jpg",
+    "stock": "consultar"
+  },
+  {
+    "id": "GAS-005",
+    "nombre": "Gas R22 (13.6kg)",
+    "marca": "Genérica",
+    "imagen": "img/gas-r22.jpg",
+    "stock": "sin-stock"
+  },
+  {
+    "id": "HER-088",
+    "nombre": "Bomba de Vacío 2 Etapas",
+    "marca": "Dosivac",
+    "imagen": "img/bomba.jpg",
+    "stock": "disponible"
   }
 ]
