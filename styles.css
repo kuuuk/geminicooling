@@ -415,7 +415,7 @@ h2 {
 
 /* Estilo para las imágenes/logos */
 .footer-logo {
-    max-width: 120px;
+    max-width: 150px;
     height: auto;
     filter: grayscale(20%); /* Opcional: para neutralizar y comparar mejor */
     transition: transform 0.3s ease;
