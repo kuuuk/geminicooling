@@ -395,50 +395,44 @@ h2 {
 
 /* ACA COMIENZA EL FOOTER Flexbox para la división en 2 bloques iguales */
 .footer-container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 60px;
+flex-wrap: wrap;
+max-width: 1200px;
+margin: 0 auto;
 }
 
 .footer-block {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra el logo verticalmente */
-    align-items: center;     /* Centra el logo horizontalmente */
-    min-height: 200px;       /* Altura mínima para que no "baile" el footer */
-    border: 1px dashed #444; /* Solo para la prueba: te ayuda a ver los límites de los 2 bloques */
+display: flex;
+justify-content: center;
+align-items: center;
+min-width: 180px;
 }
 
-/* Estilo para las imágenes/logos */
+.arca-qr {
+width: 70px;
+height: auto;
+}
+
 .footer-logo {
-    max-width: 150px;
-    height: auto;
-    filter: grayscale(20%); /* Opcional: para neutralizar y comparar mejor */
-    transition: transform 0.3s ease;
+max-width: 180px;
+height: auto;
 }
 
-.footer-logo:hover {
-    transform: scale(1.05);
+.footer-social {
+display: flex;
+flex-direction: column;
+gap: 10px;
 }
 
-.footer-label {
-    margin-top: 10px;
-    font-size: 0.8rem;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.footer-social a {
+color: var(--text);
+text-decoration: none;
+transition: 0.3s;
 }
 
-/* Barra inferior de copyright */
-.footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #333;
-    font-size: 0.75rem;
-    color: #666;
+.footer-social a:hover {
+color: var(--tecnico);
 }
