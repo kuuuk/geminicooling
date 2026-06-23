@@ -4,6 +4,7 @@
     "nombre": "Garrafa R410a (11.3kg)",
     "marca": "Anton",
     "imagen": "img/gas-r410.jpg",
+    "precio": 125000,
     "stock": "disponible"
   },
   {
@@ -11,6 +12,7 @@
     "nombre": "Motocompresor 1/4 HP R134",
     "marca": "Tecumseh",
     "imagen": "img/moto-14.jpg",
+    "precio": 125000,
     "stock": "consultar"
   },
   {
@@ -18,6 +20,7 @@
     "nombre": "Gas R22 (13.6kg)",
     "marca": "Genérica",
     "imagen": "img/gas-r22.jpg",
+    "precio": 125000,
     "stock": "sin-stock"
   },
   {
@@ -25,6 +28,7 @@
     "nombre": "Bomba de Vacío 2 Etapas",
     "marca": "Dosivac",
     "imagen": "img/bomba.jpg",
+    "precio": 125000,
     "stock": "disponible"
   },
   {
@@ -32,6 +36,7 @@
     "nombre": "Garrafa R410a (11.3kg)",
     "marca": "Anton",
     "imagen": "img/gas-r410.jpg",
+    "precio": 125000,
     "stock": "disponible"
   },
   {
@@ -39,6 +44,7 @@
     "nombre": "Motocompresor 1/4 HP R134",
     "marca": "Tecumseh",
     "imagen": "img/moto-14.jpg",
+    "precio": 125000,
     "stock": "consultar"
   },
   {
@@ -46,6 +52,7 @@
     "nombre": "Gas R22 (13.6kg)",
     "marca": "Genérica",
     "imagen": "img/gas-r22.jpg",
+    "precio": 125000,
     "stock": "sin-stock"
   },
   {
@@ -53,6 +60,7 @@
     "nombre": "Bomba de Vacío 2 Etapas",
     "marca": "Dosivac",
     "imagen": "img/bomba.jpg",
+    "precio": 125000,
     "stock": "disponible"
   },
   {
@@ -60,6 +68,7 @@
     "nombre": "Garrafa R410a (11.3kg)",
     "marca": "Anton",
     "imagen": "img/gas-r410.jpg",
+    "precio": 125000,
     "stock": "disponible"
   },
   {
@@ -67,6 +76,7 @@
     "nombre": "Motocompresor 1/4 HP R134",
     "marca": "Tecumseh",
     "imagen": "img/moto-14.jpg",
+    "precio": 125000,
     "stock": "consultar"
   },
   {
@@ -74,6 +84,7 @@
     "nombre": "Gas R22 (13.6kg)",
     "marca": "Genérica",
     "imagen": "img/gas-r22.jpg",
+    "precio": 12000,
     "stock": "sin-stock"
   },
   {
@@ -81,6 +92,7 @@
     "nombre": "Bomba de Vacío 2 Etapas",
     "marca": "Dosivac",
     "imagen": "img/bomba.jpg",
+    "precio": 5000,
     "stock": "disponible"
   }
 ]

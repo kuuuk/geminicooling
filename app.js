@@ -18,16 +18,35 @@ async function cargar(limite = null) {
         card.className = "producto-card";
         const claseCss = prod.stock.toLowerCase().replace(" ", "-");
 
-        card.innerHTML = `
-            <div style="color:var(--accent); font-size:0.7rem; margin-bottom:5px;">SKU: ${prod.id}</div>
-            <h3>${prod.nombre}</h3>
-            <p style="color:#666; font-size:0.8rem; margin-bottom:15px;">Marca: ${prod.marca}</p>
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-                <div class="tag-stock ${claseCss}">${prod.stock}</div>
-                <button onclick='agregarAlCarrito(${JSON.stringify(prod)})' 
-                        style="background:none; border:1px solid var(--iron); color:var(--accent); cursor:pointer; padding:5px 10px; font-family:var(--mono); font-size:0.7rem;">
-                        + CARRITO
-                </button>
+card.innerHTML = `
+    <div style="color:var(--accent); font-size:0.7rem; margin-bottom:5px;">SKU: ${prod.id}</div>
+
+    <h3>${prod.nombre}</h3>
+
+    <p style="color:#666; font-size:0.8rem; margin-bottom:8px;">
+        Marca: ${prod.marca}
+    </p>
+
+   <p style="color:var(--tecnico); font-size:1rem; font-weight:bold; margin-bottom:15px;">
+    ${prod.precio ? "$" + prod.precio.toLocaleString("es-AR") : "Consultar precio"}
+   </p>
+
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div class="tag-stock ${claseCss}">${prod.stock}</div>
+${prod.stock === "sin-stock"
+  ? `
+    <button disabled
+      style="background:#222; border:1px solid #444; color:#666; cursor:not-allowed; padding:5px 10px; font-family:var(--mono); font-size:0.7rem;">
+      SIN STOCK
+    </button>
+  `
+  : `
+    <button onclick='agregarAlCarrito(${JSON.stringify(prod)})'
+      style="background:none; border:1px solid var(--iron); color:var(--accent); cursor:pointer; padding:5px 10px; font-family:var(--mono); font-size:0.7rem;">
+      + CARRITO
+    </button>
+  `
+}
             </div>
         `;
         contenedor.appendChild(card);
@@ -40,9 +59,18 @@ async function cargar(limite = null) {
 
 // --- 3. LÓGICA DEL CARRITO ---
 function agregarAlCarrito(producto) {
+
+  if (producto.stock === "sin-stock") {
+    alert("Producto sin stock.");
+    return;
+  }
+
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
   carrito.push(producto);
+
   localStorage.setItem("carrito", JSON.stringify(carrito));
+
   actualizarInterfazCarrito();
 }
 
