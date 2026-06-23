@@ -98,7 +98,7 @@ function finalizarPedido() {
     mensaje += `- ${item.nombre} (ID: ${item.id})%0A`;
   });
 
-  const nroTelefono = "54911XXXXXXXX"; // Poné tu número real acá
+  const nroTelefono = "5491132820735"; // Poné tu número real acá
   window.open(`https://wa.me/${nroTelefono}?text=${mensaje}`, "_blank");
 
   localStorage.removeItem("carrito");
