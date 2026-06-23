@@ -436,3 +436,7 @@ transition: 0.3s;
 .footer-social a:hover {
 color: var(--tecnico);
 }
+
+.social-btn svg {
+    pointer-events: none;
+}
