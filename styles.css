@@ -393,7 +393,7 @@ h2 {
     border-top: 2px solid #333;
 }
 
-/* ACA COMIENZA EL FOOTER Flexbox para la división en 2 bloques iguales */
+/* ACA COMIENZA EL FOOTER Flexbox para la división en 3 bloques iguales */
 .footer-container {
 display: flex;
 justify-content: center;
