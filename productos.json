@@ -1,10 +1,10 @@
 [
   {
     "id": "GAS-001",
-    "nombre": "Garrafa R410a (11.3kg)",
+    "nombre": "Gas Refrigerante R410a 650g",
     "marca": "Anton",
     "imagen": "img/gas-r410.jpg",
-    "precio": 125000,
+    "precio": 0,
     "stock": "disponible"
   },
   {
@@ -12,15 +12,15 @@
     "nombre": "Motocompresor 1/4 HP R134",
     "marca": "Tecumseh",
     "imagen": "img/moto-14.jpg",
-    "precio": 125000,
+    "precio": 0,
     "stock": "consultar"
   },
   {
-    "id": "GAS-005",
-    "nombre": "Gas R22 (13.6kg)",
+    "id": "GAS-002",
+    "nombre": "Gas Refrigerante R32 650g",
     "marca": "Genérica",
     "imagen": "img/gas-r22.jpg",
-    "precio": 125000,
+    "precio": 0,
     "stock": "sin-stock"
   },
   {
@@ -28,23 +28,23 @@
     "nombre": "Bomba de Vacío 2 Etapas",
     "marca": "Dosivac",
     "imagen": "img/bomba.jpg",
-    "precio": 125000,
+    "precio": 0,
     "stock": "disponible"
   },
   {
-    "id": "GAS-001",
-    "nombre": "Garrafa R410a (11.3kg)",
-    "marca": "Anton",
+    "id": "COB-001",
+    "nombre": "Cobre 1/4 1M",
+    "marca": "X",
     "imagen": "img/gas-r410.jpg",
-    "precio": 125000,
+    "precio": 0,
     "stock": "disponible"
   },
   {
-    "id": "MOT-102",
-    "nombre": "Motocompresor 1/4 HP R134",
-    "marca": "Tecumseh",
+    "id": "COB-002",
+    "nombre": "Cobre 5/8 1M",
+    "marca": "x",
     "imagen": "img/moto-14.jpg",
-    "precio": 125000,
+    "precio": 0,
     "stock": "consultar"
   },
   {
