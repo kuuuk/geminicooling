@@ -79,18 +79,22 @@ function actualizarInterfazCarrito() {
   const btnFloat = document.getElementById("cart-float");
   const countSpan = document.getElementById("cart-count");
 
-  if (btnFloat && countSpan) {
-    if (carrito.length > 0) {
-      btnFloat.classList.remove("cart-hidden");
-      countSpan.innerText = carrito.length;
-    } else {
-      btnFloat.classList.add("cart-hidden");
-    }
+  if (!btnFloat || !countSpan) return;
+
+  countSpan.innerText = carrito.length;
+
+  if (carrito.length > 0) {
+    btnFloat.classList.remove("cart-hidden");
+  } else {
+    btnFloat.classList.add("cart-hidden");
   }
 }
 
 function finalizarPedido() {
+  console.log("ENTRÉ A FINALIZAR");
   const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  console.log(carrito);
+
   if (carrito.length === 0) return;
 
   let mensaje = "Hola Gemini Cooling, consulto stock por:%0A";
@@ -106,8 +110,13 @@ function finalizarPedido() {
 }
 
 function vaciarCarrito() {
+  console.log("ENTRÉ A VACIAR");
+
   if (confirm("¿Querés vaciar la lista de pedido?")) {
     localStorage.removeItem("carrito");
+
+    console.log(localStorage.getItem("carrito"));
+
     actualizarInterfazCarrito();
   }
 }
