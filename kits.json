@@ -1,8 +1,9 @@
 [
   {
     "id": "KIT-3000",
-    "titulo": "3000 Frigorías",
+    "titulo": "Hasta 3000 Frigorías",
     "precio": 0,
+    "extraMaterial": false,
     "componentes": [
       "COB-001",
       "COB-002",
@@ -16,8 +17,9 @@
   },
   {
     "id": "KIT-4500",
-    "titulo": "4500 Frigorías",
+    "titulo": "Hasta 4500 Frigorías",
     "precio": 0,
+    "extraMaterial": false,
     "componentes": [
       "COB-001",
       "COB-003",
@@ -31,8 +33,9 @@
   },
   {
     "id": "KIT-6000",
-    "titulo": "6000 Frigorías",
+    "titulo": "Hasta 6000 Frigorías",
     "precio": 0,
+    "extraMaterial": false,
     "componentes": [
       "COB-001",
       "COB-004",

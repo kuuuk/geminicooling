@@ -153,5 +153,71 @@ document.addEventListener("DOMContentLoaded", () => {
     cargar(6); // Con número = Límite
   }
 
+  cargarKits();          // ← ESTA LÍNEA FALTA
+
   actualizarInterfazCarrito();
 });
+
+async function cargarKits() {
+
+  const contenedor = document.getElementById("kits-grid");
+
+  if (!contenedor) return;
+
+  try {
+
+    const [resProductos, resKits] = await Promise.all([
+      fetch("productos.json"),
+      fetch("kits.json")
+    ]);
+
+    const productos = await resProductos.json();
+    const kits = await resKits.json();
+
+    contenedor.innerHTML = "";
+
+    kits.forEach((kit) => {
+
+      const descripcion = kit.componentes
+        .map(id => {
+
+          const prod = productos.find(p => p.id === id);
+
+          return prod ? `<li>${prod.nombre}</li>` : "";
+
+        })
+        .join("");
+
+      const card = document.createElement("div");
+      card.className = "kit-card";
+
+      card.innerHTML = `
+        <h3>${kit.titulo}</h3>
+
+        <ul>
+          ${descripcion}
+        </ul>
+
+        <div class="kit-precio">
+          ${kit.precio ? "$" + kit.precio.toLocaleString("es-AR") : "Consultar"}
+        </div>
+
+        <div class="kit-nota">
+          ${kit.nota}
+        </div>
+      `;
+
+      contenedor.appendChild(card);
+
+    });
+
+  }
+  catch(e){
+
+    contenedor.innerHTML = "<p>Error al cargar kits.</p>";
+
+    console.error(e);
+
+  }
+
+}

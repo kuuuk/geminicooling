@@ -105,6 +105,69 @@ h2 {
   border-bottom: 4px solid var(--tecnico);
 }
 
+/* ============================
+   KITS DE INSTALACIÓN
+============================ */
+
+#kits-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin:40px 0 25px;
+}
+
+.kit-card{
+    background:var(--surface);
+    border:1px solid var(--iron);
+    padding:25px;
+    min-height:420px;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.kit-card h3{
+    margin:0 0 20px;
+    font-size:1.7rem;
+    font-family:var(--sans);
+}
+
+.kit-card ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    flex:1;
+}
+
+.kit-card li{
+    color:#bdbdbd;
+    margin-bottom:8px;
+    font-size:.9rem;
+}
+
+.kit-precio{
+    margin-top:25px;
+    margin-bottom:12px;
+
+    color:var(--tecnico);
+    font-size:1.25rem;
+    font-weight:bold;
+}
+
+.kit-nota{
+    color:#6c6c6c;
+    font-size:.75rem;
+    line-height:1.4;
+}
+
+.kits-nota{
+    text-align:center;
+    color:#6c6c6c;
+    font-size:.8rem;
+    margin-top:15px;
+    margin-bottom:70px;
+}
+
 #catalogo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
