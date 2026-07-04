@@ -72,6 +72,38 @@ function agregarAlCarrito(producto) {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 
   actualizarInterfazCarrito();
+  
+}
+
+function agregarKitAlCarrito(kit) {
+
+  const btnExtra = document.getElementById(`extra-${kit.id}`);
+
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  carrito.push(kit);
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  // Al agregar el kit, habilitamos el botón de extras
+  if (btnExtra) {
+    btnExtra.classList.remove("extra-disabled");
+  }
+
+  actualizarInterfazCarrito();
+}
+
+function toggleMaterialExtra(idKit) {
+
+    const btn = document.getElementById(`extra-${idKit}`);
+
+    if (!btn) return;
+
+    if (btn.classList.contains("extra-disabled"))
+        return;
+
+    btn.classList.toggle("extra-activo");
+
 }
 
 function actualizarInterfazCarrito() {
@@ -99,9 +131,22 @@ function finalizarPedido() {
 
   let mensaje = "Hola Gemini Cooling, consulto stock por:%0A";
   carrito.forEach((item) => {
-    mensaje += `- ${item.nombre} (ID: ${item.id})%0A`;
-  });
 
+  const titulo = item.nombre || item.titulo;
+
+  mensaje += `- ${titulo} (ID: ${item.id})%0A`;
+
+  if (item.extraMaterial) {
+    mensaje += `  • Solicito materiales adicionales para esta instalación.%0A`;
+  }
+
+});
+  const hayExtras = document.querySelector(".btn-kit-extra.extra-activo");
+
+if (hayExtras) {
+  mensaje += "%0A";
+  mensaje += "• Además necesito metros/materiales adicionales para esta instalación.%0A";
+}
   const nroTelefono = "5491132820735"; // Poné tu número real acá
   window.open(`https://wa.me/${nroTelefono}?text=${mensaje}`, "_blank");
 
@@ -192,20 +237,30 @@ async function cargarKits() {
       card.className = "kit-card";
 
       card.innerHTML = `
-        <h3>${kit.titulo}</h3>
+    <h3>${kit.titulo}</h3>
 
-        <ul>
-          ${descripcion}
-        </ul>
+    <ul>
+      ${descripcion}
+    </ul>
 
-        <div class="kit-precio">
-          ${kit.precio ? "$" + kit.precio.toLocaleString("es-AR") : "Consultar"}
-        </div>
+    <div class="kit-precio">
+      ${kit.precio ? "$" + kit.precio.toLocaleString("es-AR") : "Consultar"}
+    </div>
 
-        <div class="kit-nota">
-          ${kit.nota}
-        </div>
-      `;
+    <button
+      onclick='agregarKitAlCarrito(${JSON.stringify(kit)})'
+      class="btn-kit-carrito">
+      + CARRITO
+    </button>
+
+    <button
+      id="extra-${kit.id}"
+      onclick="toggleMaterialExtra('${kit.id}')"
+      class="btn-kit-extra extra-disabled">
+      NECESITO METROS ADICIONALES
+    </button>
+
+`;
 
       contenedor.appendChild(card);
 

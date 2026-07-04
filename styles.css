@@ -498,3 +498,39 @@ color: var(--tecnico);
 .social-btn svg {
     pointer-events: none;
 }
+
+.btn-kit-extra.extra-disabled{
+
+    opacity:.35;
+    pointer-events:none;
+    cursor:not-allowed;
+
+}
+
+.btn-kit-carrito,
+.btn-kit-extra{
+
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+
+    background:none;
+    border:1px solid var(--iron);
+
+    color:var(--accent);
+
+    font-family:var(--mono);
+    font-size:.75rem;
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.extra-activo{
+
+    border-color:var(--tecnico);
+    color:var(--tecnico);
+
+}
