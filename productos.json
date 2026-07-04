@@ -1,58 +1,182 @@
 [
-  {
-    "id": "GAS-001",
-    "nombre": "Gas Refrigerante R410a 650g",
-    "marca": "Anton",
-    "imagen": "img/gas-r410.png",
-    "precio": 0,
-    "stock": "disponible"
-  },
-  {
-    "id": "MOT-102",
-    "nombre": "Motocompresor 1/4″ HP R134",
-    "marca": "Tecumseh",
-    "imagen": "img/moto-14.jpg",
-    "precio": 0,
-    "stock": "consultar"
-  },
-  {
-    "id": "GAS-002",
-    "nombre": "Gas Refrigerante R32 650g",
-    "marca": "Genérica",
-    "imagen": "img/gas-r22.jpg",
-    "precio": 0,
-    "stock": "sin-stock"
-  },
-  {
-    "id": "HER-088",
-    "nombre": "Bomba de Vacío 2 Etapas",
-    "marca": "Dosivac",
-    "imagen": "img/bomba.jpg",
-    "precio": 0,
-    "stock": "disponible"
-  },
-  {
-    "id": "COB-001",
-    "nombre": "Cobre 1/4″ 1M",
-    "marca": "X",
-    "imagen": "img/gas-r410.jpg",
-    "precio": 0,
-    "stock": "disponible"
-  },
-  {
-    "id": "COB-002",
-    "nombre": "Cobre 5/8″ 1M",
-    "marca": "x",
-    "imagen": "img/moto-14.jpg",
-    "precio": 0,
-    "stock": "consultar"
-  },
-  {
-    "id": "GAS-003",
-    "nombre": "Gas Refrigerante R22 (13.6kg)",
-    "marca": "Genérica",
-    "imagen": "img/gas-r22.jpg",
-    "precio": 0,
-    "stock": "sin-stock"
-  }
+{
+  "id": "COB-001",
+  "categoria": "Cobre",
+  "nombre": "Cobre 1/4″",
+  "marca": "Termomecánica",
+  "unidad": "Metro",
+  "imagen": "img/cobre-14.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "COB-002",
+  "categoria": "Cobre",
+  "nombre": "Cobre 3/8″",
+  "marca": "Termomecánica",
+  "unidad": "Metro",
+  "imagen": "img/cobre-38.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "COB-003",
+  "categoria": "Cobre",
+  "nombre": "Cobre 1/2″",
+  "marca": "Termomecánica",
+  "unidad": "Metro",
+  "imagen": "img/cobre-12.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "COB-004",
+  "categoria": "Cobre",
+  "nombre": "Cobre 5/8″",
+  "marca": "Termomecánica",
+  "unidad": "Metro",
+  "imagen": "img/cobre-58.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "GAS-001",
+  "categoria": "Gases",
+  "nombre": "Gas R410A 650g",
+  "marca": "BEON",
+  "unidad": "Unidad",
+  "imagen": "img/gas-r410a.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "GAS-002",
+  "categoria": "Gases",
+  "nombre": "Gas R32 650g",
+  "marca": "BEON",
+  "unidad": "Unidad",
+  "imagen": "img/gas-r32.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "AIS-001",
+  "categoria": "Aislación",
+  "nombre": "Aislación 1/4″",
+  "marca": "Armacell",
+  "unidad": "Metro",
+  "imagen": "img/aislante-14.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "AIS-002",
+  "categoria": "Aislación",
+  "nombre": "Aislación 3/8″",
+  "marca": "Armacell",
+  "unidad": "Metro",
+  "imagen": "img/aislante-38.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "AIS-003",
+  "categoria": "Aislación",
+  "nombre": "Aislación 1/2″",
+  "marca": "Armacell",
+  "unidad": "Metro",
+  "imagen": "img/aislante-12.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "AIS-004",
+  "categoria": "Aislación",
+  "nombre": "Aislación 5/8″",
+  "marca": "Armacell",
+  "unidad": "Metro",
+  "imagen": "img/aislante-58.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "CIN-001",
+  "categoria": "Cintas",
+  "nombre": "Cinta PVC SIN adhesivo",
+  "marca": "Cooltech",
+  "unidad": "Unidad",
+  "imagen": "img/aislante-12.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "TUE-001",
+  "categoria": "Refrigeración",
+  "nombre": "Tuerca Flare 1/4″",
+  "marca": "Cooltech",
+  "unidad": "Unidad",
+  "imagen": "img/tuerca-14.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "TUE-002",
+  "categoria": "Refrigeración",
+  "nombre": "Tuerca Flare 3/8″",
+  "marca": "Cooltech",
+  "unidad": "Unidad",
+  "imagen": "img/tuerca-38.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "TUE-003",
+  "categoria": "Refrigeración",
+  "nombre": "Tuerca Flare 1/2″",
+  "marca": "Cooltech",
+  "unidad": "Unidad",
+  "imagen": "img/tuerca-12.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "TUE-004",
+  "categoria": "Refrigeración",
+  "nombre": "Tuerca Flare 5/8″",
+  "marca": "Cooltech",
+  "unidad": "Unidad",
+  "imagen": "img/tuerca-58.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "MEN-001",
+  "categoria": "Ménsulas",
+  "nombre": "Par de Ménsulas 42 cm",
+  "marca": "Cooltech",
+  "unidad": "Unidad",
+  "imagen": "img/mensula-42.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "MEN-002",
+  "categoria": "Ménsulas",
+  "nombre": " Par de Ménsula 52 cm",
+  "marca": "Cooltech",
+  "unidad": "Unidad",
+  "imagen": "img/mensula-52.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "MEN-003",
+  "categoria": "Ménsulas",
+  "nombre": "Par de Ménsulas 62 cm",
+  "marca": "Cooltech",
+  "unidad": "Unidad",
+  "imagen": "img/mensula-62.png",
+  "precio": 0,
+  "stock": "disponible"
+}
 ]
