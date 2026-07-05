@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cargar(); // Sin número = Carga todo
   } else {
     console.log("Detectado: Home. Cargando 6 destacados.");
-    cargar(6); // Con número = Límite
+    cargar(9); // Con número = Límite
   }
 
   cargarKits();          // ← ESTA LÍNEA FALTA

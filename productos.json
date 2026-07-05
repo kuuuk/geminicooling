@@ -40,26 +40,6 @@
   "stock": "disponible"
 },
 {
-  "id": "GAS-001",
-  "categoria": "Gases",
-  "nombre": "Gas R410A 650g",
-  "marca": "BEON",
-  "unidad": "Unidad",
-  "imagen": "img/gas-r410a.png",
-  "precio": 0,
-  "stock": "disponible"
-},
-{
-  "id": "GAS-002",
-  "categoria": "Gases",
-  "nombre": "Gas R32 650g",
-  "marca": "BEON",
-  "unidad": "Unidad",
-  "imagen": "img/gas-r32.png",
-  "precio": 0,
-  "stock": "disponible"
-},
-{
   "id": "AIS-001",
   "categoria": "Aislación",
   "nombre": "Aislación 1/4″",
@@ -96,6 +76,26 @@
   "marca": "Armacell",
   "unidad": "Metro",
   "imagen": "img/aislante-58.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "GAS-001",
+  "categoria": "Gases",
+  "nombre": "Gas R410A 650g",
+  "marca": "BEON",
+  "unidad": "Unidad",
+  "imagen": "img/gas-r410a.png",
+  "precio": 0,
+  "stock": "disponible"
+},
+{
+  "id": "GAS-002",
+  "categoria": "Gases",
+  "nombre": "Gas R32 650g",
+  "marca": "BEON",
+  "unidad": "Unidad",
+  "imagen": "img/gas-r32.png",
   "precio": 0,
   "stock": "disponible"
 },
