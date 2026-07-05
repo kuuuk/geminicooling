@@ -4,7 +4,7 @@ const contenedor = document.getElementById("catalogo-grid");
 // --- 2. CARGA DE PRODUCTOS (CON LÍMITE OPCIONAL) ---
 async function cargar(limite = null) {
   try {
-    const res = await fetch("productos.json");
+    const res = await fetch("productos.json?v=1.1");
     let data = await res.json();
 
     if (limite) {
@@ -108,6 +108,7 @@ function toggleMaterialExtra(idKit) {
 
 function actualizarInterfazCarrito() {
   const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  const hayKit = carrito.some(item => item.id.startsWith("KIT-"));
   const btnFloat = document.getElementById("cart-float");
   const countSpan = document.getElementById("cart-count");
 
@@ -120,6 +121,24 @@ function actualizarInterfazCarrito() {
   } else {
     btnFloat.classList.add("cart-hidden");
   }
+  document.querySelectorAll(".btn-kit-extra").forEach(btn => {
+
+    const idKit = btn.id.replace("extra-", "");
+
+    const existe = carrito.some(item => item.id === idKit);
+
+    if (existe) {
+
+        btn.classList.remove("extra-disabled");
+
+    } else {
+
+        btn.classList.add("extra-disabled");
+        btn.classList.remove("extra-activo");
+
+    }
+
+  });
 }
 
 function finalizarPedido() {
@@ -212,8 +231,8 @@ async function cargarKits() {
   try {
 
     const [resProductos, resKits] = await Promise.all([
-      fetch("productos.json"),
-      fetch("kits.json")
+      fetch("productos.json?v=1.1"),
+      fetch("kits.json?v=1.1")
     ]);
 
     const productos = await resProductos.json();
