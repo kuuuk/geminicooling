@@ -4,7 +4,7 @@ const contenedor = document.getElementById("catalogo-grid");
 // --- 2. CARGA DE PRODUCTOS (CON LÍMITE OPCIONAL) ---
 async function cargar(limite = null) {
   try {
-    const res = await fetch("productos.json?v=1.1");
+    const res = await fetch("productos.json?v=1.2");
     let data = await res.json();
 
     if (limite) {
@@ -204,22 +204,28 @@ if (menuBtn && navList) {
 }
 
 // --- 5. DISPARADOR DE INICIO (DETECTAR PÁGINA) ---
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   // Convertimos toda la URL a minúsculas y buscamos "catalogo"
   const urlActual = window.location.href.toLowerCase();
   const esPaginaCatalogo = urlActual.includes("catalogo");
 
   if (esPaginaCatalogo) {
-    console.log("Detectado: Página de Catálogo. Cargando todo el stock.");
-    cargar(); // Sin número = Carga todo
-  } else {
-    console.log("Detectado: Home. Cargando 6 destacados.");
-    cargar(9); // Con número = Límite
-  }
+  console.log("Detectado: Página de Catálogo. Cargando todo el stock.");
+  await cargar();
+} else {
+  console.log("Detectado: Home. Cargando 9 destacados.");
+  await cargar(9);
+}
 
-  cargarKits();          // ← ESTA LÍNEA FALTA
+await cargarKits();
 
-  actualizarInterfazCarrito();
+actualizarInterfazCarrito();
+
+  if (window.location.hash) {
+  setTimeout(() => {
+    document.querySelector(window.location.hash)?.scrollIntoView();
+  }, 500);
+}
 });
 
 async function cargarKits() {
@@ -231,8 +237,8 @@ async function cargarKits() {
   try {
 
     const [resProductos, resKits] = await Promise.all([
-      fetch("productos.json?v=1.1"),
-      fetch("kits.json?v=1.1")
+      fetch("productos.json?v=1.2"),
+      fetch("kits.json?v=1.2")
     ]);
 
     const productos = await resProductos.json();
@@ -247,8 +253,8 @@ async function cargarKits() {
 
           const prod = productos.find(p => p.id === id);
 
-          return prod ? `<li>${prod.nombre}</li>` : "";
-
+const texto = prod ? prod.nombre : id;
+return `<li>${texto}</li>`;
         })
         .join("");
 
@@ -263,21 +269,43 @@ async function cargarKits() {
     </ul>
 
     <div class="kit-precio">
-      ${kit.precio ? "$" + kit.precio.toLocaleString("es-AR") : "Consultar"}
+      ${
+        kit.consultar
+          ? "Medidas según fabricante"
+          : (kit.precio ? "$" + kit.precio.toLocaleString("es-AR") : "Consultar")
+      }
     </div>
 
-    <button
-      onclick='agregarKitAlCarrito(${JSON.stringify(kit)})'
-      class="btn-kit-carrito">
-      + CARRITO
-    </button>
+${
+  kit.consultar
+    ? `
+      <button
+        onclick="window.open('https://wa.me/5491132820735?text=Hola%20Gemini%20Cooling,%20necesito%20un%20kit%20para%20un%20equipo%20grande.%20Les%20paso%20marca%20y%20modelo%20para%20confirmar%20las%20medidas.','_blank')"
+        class="btn-kit-carrito">
+        CONSULTAR POR WHATSAPP
+      </button>
+    `
+    : `
+      <button
+        onclick='agregarKitAlCarrito(${JSON.stringify(kit)})'
+        class="btn-kit-carrito">
+        + CARRITO
+      </button>
+    `
+}
 
-    <button
-      id="extra-${kit.id}"
-      onclick="toggleMaterialExtra('${kit.id}')"
-      class="btn-kit-extra extra-disabled">
-      NECESITO METROS ADICIONALES
-    </button>
+${
+  !kit.consultar
+    ? `
+      <button
+        id="extra-${kit.id}"
+        onclick="toggleMaterialExtra('${kit.id}')"
+        class="btn-kit-extra extra-disabled">
+        NECESITO METROS ADICIONALES
+      </button>
+    `
+    : ``
+}
 
 `;
 

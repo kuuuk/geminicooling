@@ -2,43 +2,43 @@
   {
     "id": "KIT-3000",
     "titulo": "Hasta 3000 Frigorías",
-    "precio": 0,
+    "precio": 94900,
     "extraMaterial": false,
     "componentes": [
       "COB-001",
       "COB-002",
       "AIS-001",
       "AIS-002",
-      "CIN-001"
-    ],
-    "nota": "*Tramo extra de cobre y aislante con 25% OFF sobre el Precio de Lista."
+      "CIN-001",
+      "MEN-001"
+    ]
   },
   {
     "id": "KIT-4500",
     "titulo": "Hasta 4500 Frigorías",
-    "precio": 0,
+    "precio": 104900,
     "extraMaterial": false,
     "componentes": [
       "COB-001",
       "COB-003",
       "AIS-001",
       "AIS-003",
-      "CIN-001"
-    ],
-    "nota": "*Tramo extra de cobre y aislante con 25% OFF sobre el Precio de Lista."
+      "CIN-001",
+      "MEN-002"
+    ]
   },
   {
     "id": "KIT-6000",
     "titulo": "Hasta 6000 Frigorías",
     "precio": 0,
     "extraMaterial": false,
+    "consultar": true,
     "componentes": [
-      "COB-001",
-      "COB-004",
-      "AIS-001",
-      "AIS-004",
-      "CIN-001"
-    ],
-    "nota": "*Tramo extra de cobre y aislante con 25% OFF sobre el Precio de Lista."
+      "Opción A - Cobre 1/4 + 5/8",
+      "Opción B - Cobre 3/8 + 5/8",
+      "Aislación correspondiente",
+      "CIN-001",
+      "MEN-003"
+    ]
   }
 ]

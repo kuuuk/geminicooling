@@ -6,7 +6,7 @@
   "marca": "Termomecánica",
   "unidad": "Metro",
   "imagen": "img/cobre-14.png",
-  "precio": 0,
+  "precio": 8490,
   "stock": "disponible"
 },
 {
@@ -16,7 +16,7 @@
   "marca": "Termomecánica",
   "unidad": "Metro",
   "imagen": "img/cobre-38.png",
-  "precio": 0,
+  "precio": 14900,
   "stock": "disponible"
 },
 {
@@ -26,7 +26,7 @@
   "marca": "Termomecánica",
   "unidad": "Metro",
   "imagen": "img/cobre-12.png",
-  "precio": 0,
+  "precio": 17900,
   "stock": "disponible"
 },
 {
@@ -36,7 +36,7 @@
   "marca": "Termomecánica",
   "unidad": "Metro",
   "imagen": "img/cobre-58.png",
-  "precio": 0,
+  "precio": 22900,
   "stock": "disponible"
 },
 {
@@ -46,7 +46,7 @@
   "marca": "Armacell",
   "unidad": "Metro",
   "imagen": "img/aislante-14.png",
-  "precio": 0,
+  "precio": 1900,
   "stock": "disponible"
 },
 {
@@ -56,7 +56,7 @@
   "marca": "Armacell",
   "unidad": "Metro",
   "imagen": "img/aislante-38.png",
-  "precio": 0,
+  "precio": 2000,
   "stock": "disponible"
 },
 {
@@ -66,7 +66,7 @@
   "marca": "Armacell",
   "unidad": "Metro",
   "imagen": "img/aislante-12.png",
-  "precio": 0,
+  "precio": 2200,
   "stock": "disponible"
 },
 {
@@ -76,7 +76,7 @@
   "marca": "Armacell",
   "unidad": "Metro",
   "imagen": "img/aislante-58.png",
-  "precio": 0,
+  "precio": 2400,
   "stock": "disponible"
 },
 {
@@ -86,7 +86,7 @@
   "marca": "BEON",
   "unidad": "Unidad",
   "imagen": "img/gas-r410a.png",
-  "precio": 0,
+  "precio": 36900,
   "stock": "disponible"
 },
 {
@@ -96,17 +96,17 @@
   "marca": "BEON",
   "unidad": "Unidad",
   "imagen": "img/gas-r32.png",
-  "precio": 0,
+  "precio": 31900,
   "stock": "disponible"
 },
 {
   "id": "CIN-001",
   "categoria": "Cintas",
-  "nombre": "Cinta PVC SIN adhesivo",
+  "nombre": "Cinta PVC SIN adhesivo Blanca",
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/aislante-12.png",
-  "precio": 0,
+  "precio": 3900,
   "stock": "disponible"
 },
 {
@@ -116,7 +116,7 @@
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/tuerca-14.png",
-  "precio": 0,
+  "precio": 2900,
   "stock": "disponible"
 },
 {
@@ -126,7 +126,7 @@
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/tuerca-38.png",
-  "precio": 0,
+  "precio": 3900,
   "stock": "disponible"
 },
 {
@@ -136,7 +136,7 @@
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/tuerca-12.png",
-  "precio": 0,
+  "precio": 4900,
   "stock": "disponible"
 },
 {
@@ -146,7 +146,7 @@
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/tuerca-58.png",
-  "precio": 0,
+  "precio": 6900,
   "stock": "disponible"
 },
 {
@@ -156,17 +156,17 @@
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/mensula-42.png",
-  "precio": 0,
+  "precio": 14900,
   "stock": "disponible"
 },
 {
   "id": "MEN-002",
   "categoria": "Ménsulas",
-  "nombre": " Par de Ménsula 52 cm",
+  "nombre": " Par de Ménsulas 52 cm",
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/mensula-52.png",
-  "precio": 0,
+  "precio": 16900,
   "stock": "disponible"
 },
 {
@@ -176,7 +176,7 @@
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/mensula-62.png",
-  "precio": 0,
+  "precio": 19900,
   "stock": "disponible"
 }
 ]
