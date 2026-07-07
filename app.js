@@ -28,8 +28,13 @@ card.innerHTML = `
     </p>
 
    <p style="color:var(--tecnico); font-size:1rem; font-weight:bold; margin-bottom:15px;">
-    ${prod.precio ? "$" + prod.precio.toLocaleString("es-AR") : "Consultar precio"}
-   </p>
+  ${
+    prod.precio
+      ? "$" + prod.precio.toLocaleString("es-AR") +
+        ` <span style="color:#777; font-size:.75rem; font-weight:normal;">/${prod.unidad.toLowerCase()}</span>`
+      : "Consultar precio"
+  }
+</p>
 
     <div style="display:flex; justify-content:space-between; align-items:center;">
         <div class="tag-stock ${claseCss}">${prod.stock}</div>
