@@ -2,7 +2,7 @@
   {
     "id": "KIT-3000",
     "titulo": "Hasta 3000 Frigorías",
-    "precio": 94900,
+    "precio": 73300,
     "extraMaterial": false,
     "componentes": [
       "COB-001",
@@ -16,7 +16,7 @@
   {
     "id": "KIT-4500",
     "titulo": "Hasta 4500 Frigorías",
-    "precio": 104900,
+    "precio": 80900,
     "extraMaterial": false,
     "componentes": [
       "COB-001",

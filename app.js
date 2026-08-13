@@ -4,7 +4,7 @@ const contenedor = document.getElementById("catalogo-grid");
 // --- 2. CARGA DE PRODUCTOS (CON LÍMITE OPCIONAL) ---
 async function cargar(limite = null) {
   try {
-    const res = await fetch("productos.json?v=1.2");
+    const res = await fetch("productos.json?v=1.3");
     let data = await res.json();
 
     if (limite) {
@@ -242,8 +242,8 @@ async function cargarKits() {
   try {
 
     const [resProductos, resKits] = await Promise.all([
-      fetch("productos.json?v=1.2"),
-      fetch("kits.json?v=1.2")
+      fetch("productos.json?v=1.3"),
+      fetch("kits.json?v=1.3")
     ]);
 
     const productos = await resProductos.json();

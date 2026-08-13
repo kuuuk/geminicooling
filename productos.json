@@ -6,7 +6,7 @@
   "marca": "Termomecánica",
   "unidad": "Metro",
   "imagen": "img/cobre-14.png",
-  "precio": 8490,
+  "precio": 7000,
   "stock": "disponible"
 },
 {
@@ -16,7 +16,7 @@
   "marca": "Termomecánica",
   "unidad": "Metro",
   "imagen": "img/cobre-38.png",
-  "precio": 14900,
+  "precio": 11000,
   "stock": "disponible"
 },
 {
@@ -26,7 +26,7 @@
   "marca": "Termomecánica",
   "unidad": "Metro",
   "imagen": "img/cobre-12.png",
-  "precio": 17900,
+  "precio": 15000,
   "stock": "disponible"
 },
 {
@@ -36,7 +36,7 @@
   "marca": "Termomecánica",
   "unidad": "Metro",
   "imagen": "img/cobre-58.png",
-  "precio": 22900,
+  "precio": 19000,
   "stock": "disponible"
 },
 {
@@ -46,7 +46,7 @@
   "marca": "Armacell",
   "unidad": "Metro",
   "imagen": "img/aislante-14.png",
-  "precio": 1900,
+  "precio": 1030,
   "stock": "disponible"
 },
 {
@@ -56,7 +56,7 @@
   "marca": "Armacell",
   "unidad": "Metro",
   "imagen": "img/aislante-38.png",
-  "precio": 2000,
+  "precio": 1090,
   "stock": "disponible"
 },
 {
@@ -66,7 +66,7 @@
   "marca": "Armacell",
   "unidad": "Metro",
   "imagen": "img/aislante-12.png",
-  "precio": 2200,
+  "precio": 1275,
   "stock": "disponible"
 },
 {
@@ -76,7 +76,7 @@
   "marca": "Armacell",
   "unidad": "Metro",
   "imagen": "img/aislante-58.png",
-  "precio": 2400,
+  "precio": 1420,
   "stock": "disponible"
 },
 {
@@ -86,7 +86,7 @@
   "marca": "BEON",
   "unidad": "Unidad",
   "imagen": "img/gas-r410a.png",
-  "precio": 36900,
+  "precio": 33900,
   "stock": "disponible"
 },
 {
@@ -96,7 +96,7 @@
   "marca": "BEON",
   "unidad": "Unidad",
   "imagen": "img/gas-r32.png",
-  "precio": 31900,
+  "precio": 30900,
   "stock": "disponible"
 },
 {
@@ -116,7 +116,7 @@
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/tuerca-14.png",
-  "precio": 2900,
+  "precio": 1750,
   "stock": "disponible"
 },
 {
@@ -126,7 +126,7 @@
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/tuerca-38.png",
-  "precio": 3900,
+  "precio": 2750,
   "stock": "disponible"
 },
 {
@@ -136,7 +136,7 @@
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/tuerca-12.png",
-  "precio": 4900,
+  "precio": 3750,
   "stock": "disponible"
 },
 {
@@ -146,7 +146,7 @@
   "marca": "Cooltech",
   "unidad": "Unidad",
   "imagen": "img/tuerca-58.png",
-  "precio": 6900,
+  "precio": 5950,
   "stock": "disponible"
 },
 {
